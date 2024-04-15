@@ -8,8 +8,8 @@ type Store = {
 
 const useStore = create<Store>()((set) => ({
     count: 1,
-    inc: () => set((state) => ({ count: state.count + 1 })),
-    allRemove: () => set((state) => ({ count: 0 })),
+    inc: () => set((state:any) => ({ count: state.count + 1 })),
+    allRemove: () => set((state:any) => ({ count: 0 })),
 }));
 
 export default useStore;

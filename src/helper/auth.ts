@@ -10,7 +10,7 @@ import _ from "lodash";
  * created_at:- 01/01/2024 12:42:56
  * description :- A method is simply a “chunk” of code.
  */
-export const setTokenToCookie = (access_token, token_type = "Bearer", expired_at) => {
+export const setTokenToCookie = (access_token: any, token_type = "Bearer", expired_at:any) => {
     try {
         return Cookies.set("access_token", token_type + " " + access_token, {
             expires: expired_at,
@@ -29,7 +29,7 @@ export const setTokenToCookie = (access_token, token_type = "Bearer", expired_at
  * created_at:- 01/01/2024 12:43:12
  * description :- A method is simply a “chunk” of code.
  */
-export const login = (callback) => {
+export const login = (callback:Function | undefined) => {
     if (typeof callback === "function") return callback();
     window.location.href = "/" + process.env.PUBLIC_URL;
 };
@@ -43,7 +43,7 @@ export const login = (callback) => {
  * created_at:- 01/01/2024 12:43:33
  * description :- A method is simply a “chunk” of code.
  */
-export const logout = async (callback) => {
+export const logout = async (callback: Function | undefined) => {
     sessionStorage.clear();
     localStorage.clear();
     Cookies.remove("access_token");

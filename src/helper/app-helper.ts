@@ -2,7 +2,7 @@ import { Flip } from "react-toastify";
 import { v4 as uuIdv4 } from "uuid";
 import { toast } from "react-toastify";
 import _ from "lodash";
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 
 /**
  * Toast Notification
@@ -11,7 +11,7 @@ import Cookies from 'js-cookie';
  * @param error
  * @returns {ToastId | void | never | *|*}
  */
-export const toastNotify = (type, error) => {
+export const toastNotify = (type: any, error: any) => {
     let message = "";
     if (!_.isUndefined(error.data) && !_.isUndefined(error.data.message)) {
         message = error.data.message;
@@ -63,7 +63,7 @@ export const makeRandomString = (limit = 8) => {
  * description :- nFormatter
  * created_at:- 12/12/2023 17:38:40
  */
-export const nFormatter = (n) => {
+export const nFormatter = (n:any) => {
     if (n < 1e3) return n;
     if (n >= 1e3 && n < 1e6) return +(n / 1e3).toFixed(1) + "K";
     if (n >= 1e6 && n < 1e9) return +(n / 1e6).toFixed(1) + "M";

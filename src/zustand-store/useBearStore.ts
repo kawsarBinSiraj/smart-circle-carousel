@@ -5,7 +5,7 @@ export const useBearStore = create(
     persist(
         (set, get) => ({
             bears: 0,
-            increase: () => set((state) => ({ bears: state.bears + 1 })),
+            increase: () => set((state:any) => ({ bears: state.bears + 1 })),
             removeAll: () => set({ bears: 0 }),
         }),
         {
