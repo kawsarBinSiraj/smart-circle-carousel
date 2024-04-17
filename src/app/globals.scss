@@ -38,6 +38,7 @@ body {
         background: linear-gradient(to left, #f4781f4f, #6599994d);
         border-radius: 50%;
         position: relative;
+        transition-duration: 1s;
         transition-property: all;
         transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
 
